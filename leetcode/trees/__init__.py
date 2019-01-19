@@ -2,7 +2,7 @@
 >>> BinaryTree(6, BinaryTree(5), BinaryTree(7)).__repr__()
 'BinaryTree(6, BinaryTree(5, None, None), BinaryTree(7, None, None))'
 
->>> list(BinaryTree(6, BinaryTree(5, BinaryTree(4), None), BinaryTree(8, BinaryTree(7), BinaryTree(9))))
+>>> list(BinaryTree(6, BinaryTree(5, BinaryTree(4)), BinaryTree(8, BinaryTree(7), BinaryTree(9))))
 [6, 5, 8, 4, None, 7, 9]
 >>> BinaryTree.create([6,5,7]).__repr__()
 'BinaryTree(6, BinaryTree(5, None, None), BinaryTree(7, None, None))'
@@ -29,15 +29,15 @@ class BinaryTree:
     #     cls(item, cls.create(iterator, level), cls.create(iterator, level))
     #     return cls.create(iterator[3:])
 
-    def __iter__(self):
-
-        yield self.val
-
-        if self.left:
-            yield from self.left
-
-        if self.right:
-            yield from self.right
+    # def __iter__(self):
+    #
+    #     yield self.val
+    #
+    #     if self.left:
+    #         yield from self.left
+    #
+    #     if self.right:
+    #         yield from self.right
 
 
 
